@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="696.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.developersstack.lms.controller.MainFormController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="6.0" prefHeight="338.0" prefWidth="669.0" style="-fx-background-color: #939393;">
+         <children>
+            <Label layoutX="14.0" layoutY="10.0" text="Student Management" textFill="#001eff">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="13.0" layoutY="41.0" prefHeight="4.0" prefWidth="637.0" />
+            <TextField fx:id="txtName" layoutX="14.0" layoutY="52.0" promptText="Student Name">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtContact" layoutX="199.0" layoutY="52.0" promptText="Contact Number">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnStudentSave" layoutX="388.0" layoutY="51.0" mnemonicParsing="false" onAction="#btnSaveStudentOnAction" prefHeight="29.0" prefWidth="136.0" text="Save Student">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="545.0" layoutY="6.0" mnemonicParsing="false" onAction="#newStudentOnAction" text="+ New Student">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtStudentSearch" layoutX="14.0" layoutY="86.0" prefHeight="29.0" prefWidth="637.0" promptText="Search Here">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TableView fx:id="tblStudents" layoutX="14.0" layoutY="124.0" prefHeight="200.0" prefWidth="637.0">
+              <columns>
+                <TableColumn fx:id="colStudentId" prefWidth="118.0" text="# Student Id" />
+                <TableColumn fx:id="colStudentName" prefWidth="123.0" text="Student Name" />
+                  <TableColumn fx:id="colContactNumber" prefWidth="133.0" text="Contact Number" />
+                  <TableColumn fx:id="colSeeMore" prefWidth="127.0" text="See More" />
+                  <TableColumn fx:id="ColDelete" prefWidth="135.0" text="Delete" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="7.0" layoutY="352.0" prefHeight="338.0" prefWidth="669.0" style="-fx-background-color: #939393;">
+         <children>
+            <Label layoutX="17.0" layoutY="14.0" text="Program Management" textFill="#001eff">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="16.0" layoutY="45.0" prefHeight="4.0" prefWidth="637.0" />
+            <TextField fx:id="txtProgramTitle" layoutX="17.0" layoutY="56.0" promptText="Program Title">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtProgramCredit" layoutX="202.0" layoutY="56.0" promptText="Credit">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnProgramSave" layoutX="391.0" layoutY="55.0" mnemonicParsing="false" onAction="#btnSaveProgramOnAction" prefHeight="29.0" prefWidth="136.0" text="Save Program">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="543.0" layoutY="10.0" mnemonicParsing="false" onAction="#newProgramOnAction" text="+ New Program">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtProgramSearch" layoutX="17.0" layoutY="90.0" prefHeight="29.0" prefWidth="637.0" promptText="Search Here">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TableView fx:id="tblProgram" layoutX="17.0" layoutY="128.0" prefHeight="200.0" prefWidth="637.0">
+               <columns>
+                  <TableColumn fx:id="colProgramId" prefWidth="141.0" text="# Program Id" />
+                  <TableColumn fx:id="colProgramTitle" prefWidth="176.0" text="Program Title" />
+                  <TableColumn fx:id="colCredit" prefWidth="143.0" text="Credit" />
+                  <TableColumn fx:id="ColProgramDelete" prefWidth="176.0" text="Delete" />
+               </columns>
+            </TableView>
+         </children></AnchorPane>
+      <AnchorPane layoutX="689.0" layoutY="6.0" prefHeight="338.0" prefWidth="669.0" style="-fx-background-color: #939393;">
+         <children>
+            <Label layoutX="15.0" layoutY="14.0" text="Laptop Management" textFill="#001eff">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="14.0" layoutY="45.0" prefHeight="4.0" prefWidth="637.0" />
+            <TextField fx:id="txtLapBrand" layoutX="204.0" layoutY="55.0" promptText="Laptop Brand">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextField>
+            <Button layoutX="546.0" layoutY="10.0" mnemonicParsing="false" onAction="#newLaptopOnAction" text="+ New Laptop">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtLapSearch" layoutX="15.0" layoutY="90.0" prefHeight="29.0" prefWidth="637.0" promptText="Search Here">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TableView fx:id="tblLaptop" layoutX="15.0" layoutY="128.0" prefHeight="200.0" prefWidth="637.0">
+               <columns>
+                  <TableColumn fx:id="colLapId" prefWidth="201.0" text="# Lap Id" />
+                  <TableColumn fx:id="colBrand" prefWidth="216.0" text="Brand" />
+                  <TableColumn fx:id="ColLapDelete" prefWidth="219.0" text="Delete" />
+               </columns>
+            </TableView>
+            <ComboBox fx:id="cmbStudent" layoutX="14.0" layoutY="57.0" prefHeight="25.0" prefWidth="173.0" promptText="Student" />
+            <Button fx:id="btnLapSave" layoutX="398.0" layoutY="54.0" mnemonicParsing="false" onAction="#btnSaveLaptopOnAction" prefHeight="29.0" prefWidth="136.0" text="Save Laptop">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+      <AnchorPane layoutX="689.0" layoutY="352.0" prefHeight="338.0" prefWidth="669.0" style="-fx-background-color: #939393;">
+         <children>
+            <Label layoutX="17.0" layoutY="17.0" text="Registration" textFill="#001eff">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="16.0" layoutY="48.0" prefHeight="4.0" prefWidth="637.0" />
+            <TextField fx:id="txtRegistrationSearch" layoutX="17.0" layoutY="93.0" prefHeight="29.0" prefWidth="637.0" promptText="Search Here">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TableView fx:id="tblRegistration" layoutX="17.0" layoutY="131.0" prefHeight="200.0" prefWidth="637.0">
+               <columns>
+                  <TableColumn fx:id="colId" prefWidth="125.0" text="# Id" />
+                  <TableColumn fx:id="colDate" prefWidth="192.0" text="Date" />
+                  <TableColumn fx:id="colStudent" prefWidth="161.0" text="Student" />
+                  <TableColumn fx:id="colProgram" prefWidth="158.0" text="Program" />
+               </columns>
+            </TableView>
+            <ComboBox fx:id="cmbStudentForProgram" layoutX="16.0" layoutY="56.0" prefHeight="29.0" prefWidth="173.0" promptText="Student" />
+            <Button layoutX="517.0" layoutY="58.0" mnemonicParsing="false" onAction="#btnRegisterOnAction" prefHeight="29.0" prefWidth="136.0" text="Register">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="cmbPrograms" layoutX="215.0" layoutY="56.0" prefHeight="29.0" prefWidth="173.0" promptText="Program" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
